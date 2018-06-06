@@ -3,15 +3,22 @@
 # Part 1
 
 def sum arr
-  # YOUR CODE HERE
+  arr.sum
 end
 
 def max_2_sum arr
-  # YOUR CODE HERE
+  return 0 unless arr.size > 0
+  if arr.size == 1 
+    return arr[0]
+  end
+  return arr.sort.reverse[0] + arr.sort.reverse[1]
 end
 
 def sum_to_n? arr, n
-  # YOUR CODE HERE
+  return false unless arr.size >= 1
+  num = arr.combination(2).find{|x,y| x+y==n}
+  return false unless num != nil
+  return true
 end
 
 # Part 2
