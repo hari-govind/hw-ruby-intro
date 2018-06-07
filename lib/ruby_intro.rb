@@ -65,4 +65,9 @@ class BookInStock
   def price=(num)
     @price = num
   end
+  def price_as_string
+    #http://ruby-doc.org/core-2.3.0/Kernel.html#method-i-format & 
+    #http://ruby-doc.org/core-2.3.0/String.html#method-i-25
+    "$"+"%.2f" % @price.to_s  
+  end
 end
