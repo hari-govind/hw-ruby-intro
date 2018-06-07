@@ -49,6 +49,7 @@ end
 
 class BookInStock
   def initialize(isbn, price)
+    return raise(ArgumentError) unless isbn.size != 0 && price > 0
     @isbn = isbn
     @price = price
   end
